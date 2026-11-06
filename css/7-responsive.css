@@ -1,0 +1,80 @@
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    nav ul {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 15px;
+
+    }
+
+
+
+    header {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 40px 20px;
+
+    }
+
+
+
+    .hero-text h1 {
+
+        font-size: 38px;
+
+    }
+
+
+
+    .hero-text p {
+
+        font-size: 18px;
+
+    }
+
+
+
+    .profile-box img {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+
+    section {
+
+        padding: 40px 15px;
+
+    }
+
+
+
+    h2 {
+
+        font-size: 30px;
+
+    }
+
+
+}

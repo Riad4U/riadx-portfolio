@@ -1,0 +1,181 @@
+/* Hero */
+
+.hero {
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+
+    min-height:80vh;
+    padding:50px;
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+.hero-text {
+    max-width: 600px;
+}
+
+
+.hero-text h1 {
+    font-size: 55px;
+}
+
+
+.hero-text p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.hero-description {
+
+    max-width:500px;
+
+    margin:20px 0;
+
+    color:#b8b8c8;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+/* Hero Buttons */
+
+.main-btn,
+.secondary-btn {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    padding:14px 32px;
+
+
+    border-radius:30px;
+
+
+    text-decoration:none;
+
+
+    font-size:16px;
+
+
+    font-weight:600;
+
+
+    transition:0.3s;
+
+
+    backdrop-filter:blur(15px);
+
+
+    border:1px solid rgba(255,255,255,0.25);
+
+}
+
+
+/* Download CV */
+
+.main-btn {
+
+    background:rgba(255,255,255,0.08);
+
+    color:hsl(195, 100%, 50%);
+
+}
+
+
+/* Hire Me */
+
+.secondary-btn {
+
+    background:rgba(255,255,255,0.08);
+
+    color:hsl(195, 100%, 50%);
+
+    margin-left:15px;
+
+}
+
+
+/* Hover Effects */
+
+.main-btn:hover,
+.secondary-btn:hover {
+
+    background:linear-gradient(
+        135deg,
+        rgba(0,191,255,0.35),
+        rgba(138,43,226,0.35)
+    );
+
+
+    border-color:#00bfff;
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+    0 10px 30px rgba(0,191,255,0.25);
+
+}
+
+/* Profile Image */
+
+.profile-box {
+
+    width:270px;
+    height:270px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(20px);
+
+
+    border:1px solid rgba(255,255,255,0.15);
+
+
+    border-radius:50%;   /* makes the box circular */
+
+
+    box-shadow:
+    0 0 50px rgba(0,191,255,0.25);
+
+}
+.profile-box img {
+
+    width:270px;
+
+    height:270px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+    border:3px solid rgba(0, 0, 0, 0.5);
+
+
+    position:relative;
+
+    z-index:2;
+
+}
+
