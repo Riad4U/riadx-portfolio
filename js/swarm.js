@@ -1,7 +1,7 @@
-let animationRunning = true;
+
 const canvas = document.getElementById("cursorCanvas");
 const ctx = canvas.getContext("2d");
-
+let animationRunning = true;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
