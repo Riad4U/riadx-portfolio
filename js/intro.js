@@ -11,7 +11,7 @@ const messages = [
 
     "Building Navigation...",
 
-    "Creating Hero Experience...",
+    "Creating AI Experience...",
 
     "Generating AI Services...",
 
@@ -22,7 +22,6 @@ const messages = [
     "Website Ready ✓"
 
 ];
-
 
 let index = 0;
 
@@ -45,7 +44,7 @@ const messageTimer = setInterval(()=>{
     }
 
 
-},900);
+},1000);
 
 
 
@@ -69,7 +68,7 @@ setTimeout(()=>{
 
 
 
-},8000);
+},9000);
 
 
 
