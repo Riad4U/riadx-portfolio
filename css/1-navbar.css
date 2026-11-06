@@ -154,3 +154,21 @@ nav ul a:hover {
     display:flex;
 
 }
+/* Desktop Navbar */
+
+.nav-links {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+
+.menu-toggle {
+
+    display:none;
+
+}
