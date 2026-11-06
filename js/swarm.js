@@ -103,43 +103,78 @@ class Agent {
 
 
 
-    draw(){
+draw(){
 
 
-        ctx.beginPath();
+    ctx.save();
 
 
-        ctx.moveTo(this.x,this.y);
+    // glow
 
+    ctx.shadowBlur = 20;
 
-        ctx.lineTo(
-            this.x+15,
-            this.y+6
-        );
-
-
-        ctx.lineTo(
-            this.x+6,
-            this.y+15
-        );
-
-
-        ctx.closePath();
+    ctx.shadowColor = this.color;
 
 
 
-        ctx.fillStyle=this.color;
+    // mouse pointer shape
+
+    ctx.beginPath();
 
 
-        ctx.shadowBlur=15;
-
-        ctx.shadowColor=this.color;
+    ctx.moveTo(this.x,this.y);
 
 
-        ctx.fill();
+    ctx.lineTo(
+        this.x,
+        this.y + 18
+    );
 
 
-    }
+    ctx.lineTo(
+        this.x + 6,
+        this.y + 13
+    );
+
+
+    ctx.lineTo(
+        this.x + 12,
+        this.y + 22
+    );
+
+
+    ctx.lineTo(
+        this.x + 16,
+        this.y + 19
+    );
+
+
+    ctx.lineTo(
+        this.x + 10,
+        this.y + 9
+    );
+
+
+    ctx.lineTo(
+        this.x + 18,
+        this.y + 9
+    );
+
+
+    ctx.closePath();
+
+
+
+    ctx.fillStyle = this.color;
+
+    ctx.fill();
+
+
+
+    ctx.restore();
+
+
+}
 
 }
 
