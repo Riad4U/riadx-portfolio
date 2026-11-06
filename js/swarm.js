@@ -1,3 +1,4 @@
+let animationRunning = true;
 const canvas = document.getElementById("cursorCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -111,9 +112,7 @@ draw(){
 
     // glow
 
-    ctx.shadowBlur = 20;
-
-    ctx.shadowColor = this.color;
+    ctx.shadowBlur = 0;
 
 
 
@@ -184,7 +183,7 @@ draw(){
 
 // Create agents
 
-for(let i=0;i<250;i++){
+for(let i=0;i<80;i++){
 
     agents.push(new Agent(i));
 
@@ -194,6 +193,8 @@ for(let i=0;i<250;i++){
 
 
 function animate(){
+
+    if(!animationRunning) return;
 
 
     ctx.clearRect(

@@ -386,3 +386,6 @@ body::after {
     }
 
 }
+.bg-animation{
+    display:none;
+}

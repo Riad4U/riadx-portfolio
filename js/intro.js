@@ -85,7 +85,7 @@ skip.addEventListener("click",()=>{
 
     setTimeout(()=>{
 
-
+        animationRunning = false;
         intro.style.display="none";
 
 
