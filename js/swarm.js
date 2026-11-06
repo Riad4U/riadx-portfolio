@@ -59,18 +59,17 @@ class Agent {
         targets[index % targets.length];
 
 
-        this.targetX = target.x + 
-        (Math.random()*200-100);
+    this.targetX = target.x + 
+     (Math.random()*500 - 250);
 
 
-        this.targetY = target.y +
-        (Math.random()*100-50);
+    this.targetY = target.y +
+    (Math.random()*300 - 150);
 
 
 
         this.speed =
-        Math.random()*2+1;
-
+        Math.random()*3+0.5;
 
 
         this.color =
