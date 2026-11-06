@@ -14,9 +14,36 @@
     <link rel="stylesheet" href="css/5-projects.css">
     <link rel="stylesheet" href="css/6-skills.css">
     <link rel="stylesheet" href="css/7-responsive.css">
+    <link rel="stylesheet" href="css/8-intro.css">
 </head>
 
 <body>
+
+    <div id="ai-intro">
+
+        <canvas id="cursorCanvas"></canvas>
+
+        <div class="intro-content">
+
+            <h1 class="intro-logo">
+                Riad<span>X</span>
+            </h1>
+
+            <p id="intro-text">
+                Initializing AI Agents...
+            </p>
+
+            <div class="loader">
+                <div class="loader-bar"></div>
+            </div>
+
+            <button id="skipIntro">
+                Skip Intro
+            </button>
+
+        </div>
+
+    </div>
     <div class="bg-animation"></div>
     <nav>
 
@@ -517,12 +544,6 @@
 
     <section id="contact">
 
-        <h2>Let's Build Something With AI</h2>
-
-        <p>
-            Have an AI app idea? Let's turn your concept into a smart mobile experience.
-        </p>
-
         <br>
         <div class="contact-buttons">
 
@@ -571,6 +592,8 @@
         });
 
     </script>
+    <script src="js/swarm.js"></script>
+    <script src="js/intro.js"></script>
 </body>
 
 </html>
