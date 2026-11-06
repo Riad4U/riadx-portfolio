@@ -3,9 +3,21 @@
 @media (max-width:768px) {
 
 
+    /* General */
+
     body {
+
         overflow-x:hidden;
+
     }
+
+
+    section {
+
+        padding:40px 20px;
+
+    }
+
 
 
     /* Navbar */
@@ -14,22 +26,33 @@
 
         width:90%;
 
+        height:auto;
+
         flex-direction:column;
 
         gap:15px;
 
-        padding:15px;
+        padding:15px 20px;
 
     }
 
 
     nav ul {
 
+        width:100%;
+
         flex-direction:column;
 
         gap:15px;
 
         text-align:center;
+
+    }
+
+
+    nav ul li {
+
+        width:100%;
 
     }
 
@@ -73,14 +96,15 @@
     }
 
 
-    .hero-description {
+    .hero-text p {
 
         font-size:16px;
 
     }
 
 
-    /* Buttons */
+
+    /* Hero Buttons */
 
     .main-btn,
     .secondary-btn {
@@ -88,6 +112,14 @@
         width:100%;
 
         margin:10px 0;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        box-sizing:border-box;
 
     }
 
@@ -100,7 +132,7 @@
 
 
 
-    /* Profile */
+    /* Profile Image */
 
     .profile-box {
 
@@ -121,16 +153,16 @@
 
 
 
-    /* Section headings */
+    /* Headings */
 
-    .section-header h2 {
+    h2 {
 
         font-size:32px;
 
     }
 
 
-    h2 {
+    .section-header h2 {
 
         font-size:32px;
 
@@ -149,7 +181,6 @@
         grid-template-columns:1fr;
 
     }
-
 
 
     .service-card,
@@ -198,23 +229,40 @@
 
 
 
-    /* Contact */
+    /* Contact Buttons */
 
     .contact-buttons {
 
+        display:flex;
+
         flex-direction:column;
 
+        width:100%;
+
         gap:15px;
+
+        align-items:center;
 
     }
 
 
     .contact-buttons a {
 
-        width:100%;
+        width:90%;
+
+        max-width:350px;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
 
         text-align:center;
 
+        box-sizing:border-box;
+
     }
+
 
 }

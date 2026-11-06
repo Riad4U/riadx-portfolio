@@ -68,43 +68,6 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* Contact Section */
-
-
-/* Contact Buttons Mobile */
-
-.contact-buttons {
-
-    display:flex;
-
-    flex-direction:column;
-
-    width:100%;
-
-    gap:15px;
-
-    align-items:center;
-
-}
-
-
-.contact-buttons a {
-
-    width:90%;
-
-    max-width:350px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    box-sizing:border-box;
-
-}
 
 /* Footer */
 
