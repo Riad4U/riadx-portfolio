@@ -20,7 +20,7 @@
 
 
 
-   /* Mobile Navbar */
+  /* Mobile Navbar */
 
 nav {
 
@@ -28,34 +28,50 @@ nav {
 
     flex-direction:row;
 
-    justify-content:center;
-
-    gap:30px;
+    justify-content:space-between;
 
     padding:15px 20px;
 
 }
 
 
-.logo {
+.menu-toggle {
 
-    font-size:24px;
+    display:block;
 
 }
 
 
-nav ul {
+.nav-links {
 
     display:none;
 
+    position:absolute;
+
+    top:80px;
+
+    left:5%;
+
+    width:90%;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
 }
 
 
-.nav-btn {
+.nav-links.active {
 
-    padding:8px 16px;
-
-    font-size:13px;
+    display:flex;
 
 }
 
