@@ -7,8 +7,6 @@ canvas.height = window.innerHeight;
 
 
 
-// AI Cursor Agents
-
 let agents = [];
 
 const colors = [
@@ -18,48 +16,91 @@ const colors = [
 ];
 
 
+// Build locations
+
+const targets = [
+
+    {
+        x: window.innerWidth / 2,
+        y: 80
+    },
+
+    {
+        x: window.innerWidth / 2,
+        y: window.innerHeight * 0.35
+    },
+
+    {
+        x: window.innerWidth / 2,
+        y: window.innerHeight * 0.65
+    },
+
+    {
+        x: window.innerWidth / 2,
+        y: window.innerHeight * 0.85
+    }
+
+];
+
+
 
 class Agent {
 
-    constructor(){
 
-        this.x = Math.random() * canvas.width;
-
-        this.y = Math.random() * canvas.height;
+    constructor(index){
 
 
-        this.targetX = canvas.width / 2;
+        this.x = Math.random()*canvas.width;
 
-        this.targetY = canvas.height / 2;
-
-
-        this.speed = Math.random() * 2 + 1;
+        this.y = Math.random()*canvas.height;
 
 
-        this.size = 8;
+        let target =
+        targets[index % targets.length];
+
+
+        this.targetX = target.x + 
+        (Math.random()*200-100);
+
+
+        this.targetY = target.y +
+        (Math.random()*100-50);
+
+
+
+        this.speed =
+        Math.random()*2+1;
+
 
 
         this.color =
-        colors[Math.floor(Math.random()*colors.length)];
+        colors[
+        Math.floor(Math.random()*colors.length)
+        ];
 
     }
+
 
 
 
     update(){
 
 
-        let dx = this.targetX - this.x;
+        let dx =
+        this.targetX-this.x;
 
-        let dy = this.targetY - this.y;
+
+        let dy =
+        this.targetY-this.y;
 
 
-        this.x += dx * 0.01 * this.speed;
+        this.x += dx*0.015*this.speed;
 
-        this.y += dy * 0.01 * this.speed;
+        this.y += dy*0.015*this.speed;
 
 
     }
+
 
 
 
@@ -73,14 +114,14 @@ class Agent {
 
 
         ctx.lineTo(
-            this.x + 15,
-            this.y + 5
+            this.x+15,
+            this.y+6
         );
 
 
         ctx.lineTo(
-            this.x + 5,
-            this.y + 15
+            this.x+6,
+            this.y+15
         );
 
 
@@ -88,12 +129,12 @@ class Agent {
 
 
 
-        ctx.fillStyle = this.color;
+        ctx.fillStyle=this.color;
 
 
-        ctx.shadowBlur = 15;
+        ctx.shadowBlur=15;
 
-        ctx.shadowColor = this.color;
+        ctx.shadowColor=this.color;
 
 
         ctx.fill();
@@ -101,17 +142,17 @@ class Agent {
 
     }
 
-
 }
 
 
 
 
-// Create 200 AI agents
 
-for(let i=0;i<200;i++){
+// Create agents
 
-    agents.push(new Agent());
+for(let i=0;i<250;i++){
+
+    agents.push(new Agent(i));
 
 }
 
@@ -129,20 +170,18 @@ function animate(){
     );
 
 
-    agents.forEach(agent=>{
 
+    agents.forEach(agent=>{
 
         agent.update();
 
         agent.draw();
-
 
     });
 
 
 
     requestAnimationFrame(animate);
-
 
 }
 
@@ -152,15 +191,12 @@ animate();
 
 
 
-
-// Resize Fix
-
 window.addEventListener("resize",()=>{
 
 
-    canvas.width = window.innerWidth;
+canvas.width=window.innerWidth;
 
-    canvas.height = window.innerHeight;
+canvas.height=window.innerHeight;
 
 
 });
