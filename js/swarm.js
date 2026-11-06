@@ -205,7 +205,6 @@ function animate(){
     );
 
 
-
     agents.forEach(agent=>{
 
         agent.update();
@@ -215,13 +214,9 @@ function animate(){
     });
 
 
-
     requestAnimationFrame(animate);
 
 }
-
-
-animate();
 
 
 
