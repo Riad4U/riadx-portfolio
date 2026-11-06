@@ -1,80 +1,220 @@
 /* Mobile Responsive */
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
+
+    body {
+        overflow-x:hidden;
+    }
+
+
+    /* Navbar */
 
     nav {
 
-        flex-direction: column;
+        width:90%;
 
-        gap: 20px;
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:15px;
 
     }
 
 
     nav ul {
 
-        flex-direction: column;
+        flex-direction:column;
 
-        text-align: center;
+        gap:15px;
 
-        gap: 15px;
+        text-align:center;
+
+    }
+
+
+    .nav-btn {
+
+        padding:10px 20px;
 
     }
 
 
 
-    header {
+    /* Hero */
 
-        flex-direction: column;
+    .hero {
 
-        text-align: center;
+        flex-direction:column;
 
-        padding: 40px 20px;
+        text-align:center;
+
+        gap:40px;
+
+        padding:120px 20px 50px;
 
     }
 
+
+    .hero-text {
+
+        max-width:100%;
+
+    }
 
 
     .hero-text h1 {
 
-        font-size: 38px;
+        font-size:38px;
+
+        line-height:1.2;
+
+    }
+
+
+    .hero-description {
+
+        font-size:16px;
+
+    }
+
+
+    /* Buttons */
+
+    .main-btn,
+    .secondary-btn {
+
+        width:100%;
+
+        margin:10px 0;
+
+    }
+
+
+    .secondary-btn {
+
+        margin-left:0;
 
     }
 
 
 
-    .hero-text p {
+    /* Profile */
 
-        font-size: 18px;
+    .profile-box {
+
+        width:220px;
+
+        height:220px;
 
     }
-
 
 
     .profile-box img {
 
-        width: 180px;
+        width:200px;
 
-        height: 180px;
-
-    }
-
-
-
-    section {
-
-        padding: 40px 15px;
+        height:200px;
 
     }
 
+
+
+    /* Section headings */
+
+    .section-header h2 {
+
+        font-size:32px;
+
+    }
 
 
     h2 {
 
-        font-size: 30px;
+        font-size:32px;
 
     }
 
+
+
+    /* Cards */
+
+    .services-container,
+    .workflow-container,
+    .tech-container,
+    .skills-container,
+    .why-container {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .service-card,
+    .workflow-card,
+    .why-card,
+    .tech-card {
+
+        padding:25px;
+
+    }
+
+
+
+    /* Projects */
+
+    .project-showcase {
+
+        flex-direction:column;
+
+        gap:30px;
+
+    }
+
+
+    .project-showcase.reverse {
+
+        flex-direction:column;
+
+    }
+
+
+    .project-image img {
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+
+    .project-info h3 {
+
+        font-size:26px;
+
+    }
+
+
+
+    /* Contact */
+
+    .contact-buttons {
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+
+    .contact-buttons a {
+
+        width:100%;
+
+        text-align:center;
+
+    }
 
 }
