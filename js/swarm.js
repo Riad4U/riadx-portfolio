@@ -1,14 +1,13 @@
-
 const canvas = document.getElementById("cursorCanvas");
 const ctx = canvas.getContext("2d");
-let animationRunning = true;
+
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 
-
 let agents = [];
+
 
 const colors = [
     "#008cff",
@@ -17,184 +16,81 @@ const colors = [
 ];
 
 
-// Build locations
-
-const targets = [
-
-    {
-        x: window.innerWidth / 2,
-        y: 80
-    },
-
-    {
-        x: window.innerWidth / 2,
-        y: window.innerHeight * 0.35
-    },
-
-    {
-        x: window.innerWidth / 2,
-        y: window.innerHeight * 0.65
-    },
-
-    {
-        x: window.innerWidth / 2,
-        y: window.innerHeight * 0.85
-    }
-
-];
-
-
 
 class Agent {
 
+    constructor(){
 
-    constructor(index){
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
 
+        this.targetX = canvas.width / 2;
+        this.targetY = canvas.height / 2;
 
-        this.x = Math.random()*canvas.width;
-
-        this.y = Math.random()*canvas.height;
-
-
-        let target =
-        targets[index % targets.length];
-
-
-    this.targetX = target.x + 
-     (Math.random()*500 - 250);
-
-
-    this.targetY = target.y +
-    (Math.random()*300 - 150);
-
-
-
-        this.speed =
-        Math.random()*3+0.5;
-
+        this.speed = Math.random() * 2 + 1;
 
         this.color =
-        colors[
-        Math.floor(Math.random()*colors.length)
-        ];
+        colors[Math.floor(Math.random()*colors.length)];
 
     }
-
-
 
 
     update(){
 
-
-        let dx =
-        this.targetX-this.x;
-
-
-        let dy =
-        this.targetY-this.y;
+        let dx = this.targetX - this.x;
+        let dy = this.targetY - this.y;
 
 
-        this.x += dx*0.015*this.speed;
-
-        this.y += dy*0.015*this.speed;
-
+        this.x += dx * 0.01 * this.speed;
+        this.y += dy * 0.01 * this.speed;
 
     }
 
 
 
+    draw(){
 
-draw(){
+        ctx.beginPath();
 
+        ctx.moveTo(this.x,this.y);
 
-    ctx.save();
+        ctx.lineTo(
+            this.x + 15,
+            this.y + 5
+        );
 
+        ctx.lineTo(
+            this.x + 5,
+            this.y + 15
+        );
 
-    // glow
-
-    ctx.shadowBlur = 0;
-
-
-
-    // mouse pointer shape
-
-    ctx.beginPath();
-
-
-    ctx.moveTo(this.x,this.y);
+        ctx.closePath();
 
 
-    ctx.lineTo(
-        this.x,
-        this.y + 18
-    );
+        ctx.fillStyle = this.color;
 
+        ctx.fill();
 
-    ctx.lineTo(
-        this.x + 6,
-        this.y + 13
-    );
-
-
-    ctx.lineTo(
-        this.x + 12,
-        this.y + 22
-    );
-
-
-    ctx.lineTo(
-        this.x + 16,
-        this.y + 19
-    );
-
-
-    ctx.lineTo(
-        this.x + 10,
-        this.y + 9
-    );
-
-
-    ctx.lineTo(
-        this.x + 18,
-        this.y + 9
-    );
-
-
-    ctx.closePath();
-
-
-
-    ctx.fillStyle = this.color;
-
-    ctx.fill();
-
-
-
-    ctx.restore();
-
-
-}
+    }
 
 }
 
 
 
 
-
-// Create agents
+// Create cursors
 
 for(let i=0;i<80;i++){
 
-    agents.push(new Agent(i));
+    agents.push(new Agent());
 
 }
+
 
 
 
 
 function animate(){
-
-    if(!animationRunning) return;
 
 
     ctx.clearRect(
@@ -216,17 +112,19 @@ function animate(){
 
     requestAnimationFrame(animate);
 
+
 }
+
+
+animate();
+
 
 
 
 
 window.addEventListener("resize",()=>{
 
-
-canvas.width=window.innerWidth;
-
-canvas.height=window.innerHeight;
-
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
 });
