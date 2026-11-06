@@ -20,46 +20,44 @@
 
 
 
-    /* Navbar */
+   /* Mobile Navbar */
+
+nav {
+
+    width:90%;
+
+    flex-direction:row;
+
+    justify-content:center;
+
+    gap:30px;
+
+    padding:15px 20px;
+
+}
 
 
+.logo {
 
-    nav {
+    font-size:24px;
 
-        width: 90%;
-
-        flex-direction: row;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        padding: 15px 20px;
-
-    }
+}
 
 
-    .logo {
+nav ul {
 
-        font-size: 24px;
+    display:none;
 
-    }
-
-
-    nav ul {
-
-        display: none;
-
-    }
+}
 
 
-    .nav-btn {
+.nav-btn {
 
-        padding: 10px 18px;
+    padding:8px 16px;
 
-        font-size: 14px;
+    font-size:13px;
 
-    }
+}
 
 
 
