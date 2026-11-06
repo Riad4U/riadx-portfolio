@@ -24,8 +24,9 @@ class Agent {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
 
-        this.targetX = canvas.width / 2;
-        this.targetY = canvas.height / 2;
+        this.stage = Math.floor(Math.random() * 4);
+
+        this.setTarget();
 
         this.speed = Math.random() * 2 + 1;
 
@@ -34,7 +35,58 @@ class Agent {
 
     }
 
+setTarget(){
 
+
+    const positions = [
+
+        // Navbar
+
+        {
+            x: canvas.width / 2,
+            y: 80
+        },
+
+
+        // Hero
+
+        {
+            x: canvas.width / 2,
+            y: canvas.height * 0.35
+        },
+
+
+        // Services
+
+        {
+            x: canvas.width / 2,
+            y: canvas.height * 0.55
+        },
+
+
+        // Projects
+
+        {
+            x: canvas.width / 2,
+            y: canvas.height * 0.75
+        }
+
+    ];
+
+
+
+    let target = positions[this.stage];
+
+
+    this.targetX =
+    target.x + (Math.random()*300-150);
+
+
+    this.targetY =
+    target.y + (Math.random()*150-75);
+
+
+}
     update(){
 
         let dx = this.targetX - this.x;
@@ -114,7 +166,29 @@ function animate(){
 
 
 }
+setInterval(()=>{
 
+
+    agents.forEach(agent=>{
+
+
+        agent.stage++;
+
+
+        if(agent.stage > 3){
+
+            agent.stage = 0;
+
+        }
+
+
+        agent.setTarget();
+
+
+    });
+
+
+},2000);
 
 animate();
 
