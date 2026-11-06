@@ -1,5 +1,6 @@
 /* AI Intro Screen */
 
+
 #ai-intro {
 
     position: fixed;
@@ -22,8 +23,12 @@
 
     overflow: hidden;
 
+    transition: opacity 1s ease;
+
 }
 
+
+/* AI Cursor Canvas */
 
 #cursorCanvas {
 
@@ -37,6 +42,31 @@
 
 }
 
+
+
+/* Blue AI Glow */
+
+#ai-intro::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    background: #008cff;
+
+    filter: blur(180px);
+
+    opacity: 0.25;
+
+}
+
+
+
+/* Content */
 
 
 .intro-content {
@@ -53,6 +83,9 @@
 
 
 
+/* Logo */
+
+
 .intro-logo {
 
     font-size: 80px;
@@ -61,16 +94,27 @@
 
     letter-spacing: 3px;
 
+    color: white;
+
 }
 
 
 
 .intro-logo span {
 
-    color: #00d084;
+    color: #008cff;
+
+    text-shadow:
+
+    0 0 15px #008cff,
+
+    0 0 35px #008cff;
 
 }
 
+
+
+/* Loading Text */
 
 
 #intro-text {
@@ -85,13 +129,18 @@
 
 
 
+/* Loading Bar */
+
+
 .loader {
 
     width: 300px;
 
     height: 6px;
 
-    background: rgba(255,255,255,0.1);
+    background:
+
+    rgba(255,255,255,0.1);
 
     border-radius: 20px;
 
@@ -109,11 +158,24 @@
 
     height: 100%;
 
-    background: linear-gradient(
+
+    background:
+
+    linear-gradient(
+
         90deg,
-        #00d084,
-        #d4af37
+
+        #008cff,
+
+        #00c6ff
+
     );
+
+
+    box-shadow:
+
+    0 0 15px #008cff;
+
 
     animation: loading 5s forwards;
 
@@ -123,11 +185,13 @@
 
 @keyframes loading {
 
+
     from {
 
         width: 0%;
 
     }
+
 
     to {
 
@@ -135,23 +199,36 @@
 
     }
 
+
 }
 
+
+
+/* Skip Button */
 
 
 #skipIntro {
 
     padding: 10px 25px;
 
+
     border-radius: 30px;
 
-    border: 1px solid #00d084;
+
+    border: 1px solid #008cff;
+
 
     background: transparent;
 
+
     color: white;
 
+
     cursor: pointer;
+
+
+    transition: 0.3s;
+
 
 }
 
@@ -159,6 +236,13 @@
 
 #skipIntro:hover {
 
-    background: #00d084;
+
+    background: #008cff;
+
+
+    box-shadow:
+
+    0 0 20px #008cff;
+
 
 }
