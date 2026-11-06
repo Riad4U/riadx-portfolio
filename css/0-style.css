@@ -325,3 +325,48 @@ body::after {
     }
 
 }
+.contact-buttons {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.contact-btn {
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:14px 30px;
+
+    min-width:140px;
+
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#00bfff,#8a2be2);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+
+.contact-btn:hover {
+
+    transform:translateY(-5px);
+
+}
